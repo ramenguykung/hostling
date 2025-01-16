@@ -18,7 +18,7 @@ export default function Home() {
         />
         <ol>
           <li>
-            หวัดดีโลก <code>src/app/page.tsx</code>.
+            หวัดดีโลก 5555 <code>src/app/page.tsx</code>.
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>

@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hostling Project
+
+Welcome to the Hostling project! This project aims to helps the dorm manager to connect with their customer faster and more reliable while providing a hessel-free management.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the Hostling project, follow the steps below to set up the development environment.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ensure you have the following software installed on your machine:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Node.js](https://nodejs.org/) (version 18.x or higher)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  - Alternatively, [Bun](https://bun.sh/) is also supported in this project. Install Bun:
 
-## Learn More
+    - Windows
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    powershell -c "irm bun.sh/install.ps1 | iex"
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    - Linux & MacOS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    curl -fsSL https://bun.sh/install | bash
+    ```
 
-## Deploy on Vercel
+- [Git](https://git-scm.com/)
+- [Docker](https://www.docker.com/) (optional, for containerized development)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/ramenguykung/hostling.git
+   cd hostling
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   # ci stands for "clean install" equivilent to npm install --frozen-lockfile
+   npm ci
+   ```
+
+3. **Set up environment variables:**
+   Create a `.env` file in the root directory and add the necessary environment variables. Refer to the `.env.example` file for the required variables.
+
+4. **Run the application:**
+
+   ```bash
+   npm start
+   ```
+
+### Contributing
+
+We welcome contributions from the community! To contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes and push them to your fork.
+4. Create a pull request with a detailed description of your changes.
+
+### License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+Happy coding!

@@ -1,6 +1,10 @@
 import Link from "next/link"
 import styles from "./Navbar.module.css"
 
+/**
+ * A component that returns HTML document upon the call 
+ * @returns HTML document on the call
+ */
 export default function Navbar(){
     return(
 

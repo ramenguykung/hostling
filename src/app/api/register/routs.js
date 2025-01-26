@@ -1,6 +1,5 @@
- import { NextResponse } from "next/server"; 
+import { NextResponse } from "next/server"; 
 
- 
 export async function POST(req) {
         try {
             const { name,surname,email, password } = await req.json();
@@ -10,6 +9,6 @@ export async function POST(req) {
                 console.log("Password: ", password);
             return NextResponse.json({message: "User registered."}, { status: 201 });
         }catch(error) {
-            return NextResponse.json({ message: "An error occured while registrating the user." }, { status: 500 });
+            return NextResponse.json({ message: "An error occured while registering user." }, { status: 500 });
         }
 }

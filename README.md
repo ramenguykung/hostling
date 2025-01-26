@@ -11,7 +11,9 @@ To get started with the Hostling project, follow the steps below to set up the d
 Ensure you have the following software installed on your machine:
 
 - [Node.js](https://nodejs.org/) (version 18.x or higher)
+
   - Alternatively, [Bun](https://bun.sh/) is also supported in this project. Install Bun:
+
     - Windows
 
     ```bash
@@ -31,26 +33,26 @@ Ensure you have the following software installed on your machine:
 
 1. **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/ramenguykung/hostling.git
-    cd hostling
-    ```
+   ```bash
+   git clone https://github.com/ramenguykung/hostling.git
+   cd hostling
+   ```
 
 2. **Install dependencies:**
 
-    ```bash
-    # ci stands for "clean install" equivilent to npm install --frozen-lockfile
-    npm ci 
-    ```
+   ```bash
+   # ci stands for "clean install" equivilent to npm install --frozen-lockfile
+   npm ci
+   ```
 
 3. **Set up environment variables:**
-    Create a `.env` file in the root directory and add the necessary environment variables. Refer to the `.env.example` file for the required variables.
+   Create a `.env` file in the root directory and add the necessary environment variables. Refer to the `.env.example` file for the required variables.
 
 4. **Run the application:**
 
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
 ### Contributing
 

@@ -9,19 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
     "next": "15.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sass": "^1.83.1"
-=======
+    "sass": "^1.83.1",
     "bcryptjs": "^2.4.3",
     "mongoose": "^8.9.5",
-    "next": "^15.1.2",
-    "next-auth": "^4.24.11",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
->>>>>>> main
+    "next-auth": "^4.24.11"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

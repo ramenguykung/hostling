@@ -219,16 +219,23 @@ function register() {
 
                                             
                                         <div className={styles.nt}>
-                                        <input onChange={(e) => setDay(e.target.value)}  className={styles.input1} type="number"  placeholder="Day" />   
-                                        <input onChange={(e) => setYear(e.target.value)}  className={styles.input1} type="number"  placeholder="Year" />   
+                                        <input onChange={(e) => setDay(e.target.value)}  className={styles.input1} type="text"  placeholder="Day" />   
+                                        <input onChange={(e) => setYear(e.target.value)}  className={styles.input1} type="text"  placeholder="Year" />   
                                             </div> 
                                           
                                                 
-                                           
+                                          
+                                            <select onChange={(e) => setMonth(e.target.value)}  className={styles.input} defaultValue="">
                                                 
-                                            <input onChange={(e) => setGender(e.target.value)}  className={styles.input} type="text"  placeholder="Gender" /> 
+                                              
+                                                <option value="" >Gender</option>
+                                                 <option value="man">man</option>
+                                                 <option value="woman">woman</option>
+                                               
+                                               </select> 
+                                           
                                                 <input onChange={(e) => setAddress(e.target.value)}  className={styles.input} type="text"  placeholder="Address" />   
-                                                <input onChange={(e) => setPostalCode(e.target.value)}  className={styles.input} type="number"  placeholder="Postal Code" />  
+                                                <input onChange={(e) => setPostalCode(e.target.value)}  className={styles.input} type="text"  placeholder="Postal Code" />  
 
                                                 <input id="emailInput" onChange={(e) => setEmail(e.target.value)} className={styles.input} type="email" placeholder="Email" required />
 

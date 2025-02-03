@@ -1,10 +1,11 @@
 "use client"
 import Link from "next/link"
 import styles from "./Navbar.module.css"
-import { signOut } from 'next-auth/react'
-import Image from "next/image";
 
-
+/**
+ * A component that returns HTML document upon the call 
+ * @returns HTML document on the call
+ */
 export default function Navbar({ session }){
 
    

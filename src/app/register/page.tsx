@@ -1,8 +1,8 @@
-"use client"
-import { useState } from 'react';
-import styles from "./page.module.css"
-import Link from "next/link"
-import Image from "next/image"
+"use client";
+import { useState } from "react";
+import styles from "./page.module.css";
+import Link from "next/link";
+import Image from "next/image";
 import { useSession } from 'next-auth/react';
 import { redirect , useRouter} from 'next/navigation'
 
@@ -36,10 +36,10 @@ function register() {
                           const handleSubmit = async (e) => {
                              e.preventDefault();
 
-                            if (password != confirmpassword) {
-                            setError("Password do not match!");
-                            return;
-                            }
+        if (password !== confirmpassword) {
+            setError("Password do not match!");
+            return;
+        }
 
                             if (!name || !surname || !month|| !email ||  !password || !confirmpassword) { 
                               setError("Please complete all inputs!");

@@ -1,32 +1,22 @@
+"use client";
+import { useSession } from "next-auth/react";
+import styles from "./page.module.css"
 import Navbar from "./componants/Navbar";
 
-export default function Home() {
-  return (
-<<<<<<< HEAD
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            หวัดดีโลก 5555 <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-=======
->>>>>>> main
 
-      <>
+
+export default function Home() {
+
+  const { data: session } = useSession(); 
+  return (
+
+    <>
       
-                                        <Navbar/>
-          
-          
+                                        <Navbar session={session} />
+                                         
+                                              <div className={styles.container}>
+                                            <h1 className={styles.text}>หอพัก91</h1>
+                                            </div>
 
 
           </>

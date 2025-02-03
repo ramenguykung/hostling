@@ -30,7 +30,7 @@
 .frame{
 
     width: 600px;
-    height: 1030px;
+    height: 1025px;
     flex-shrink: 0;
 
     border-radius: var(--medium-20px, 20px);
@@ -321,39 +321,6 @@ letter-spacing: 0.32px;
     justify-content: center; 
     align-items: center;
   
-
-
-}
-
-.error1{
-
-
-    
-    
-    background-color: #f56565; /* bg-red-500 */
-    width: fit-content; /* w-fit */
-    font-size: 0.875rem; /* text-sm */
-    color: white; /* text-white */
-    padding-top: 0.25rem; /* py-1 (top and bottom padding) */
-    padding-bottom: 0.25rem; /* py-1 (top and bottom padding) */
-    padding-left: 0.75rem; /* px-3 (left and right padding) */
-    padding-right: 0.75rem; /* px-3 (left and right padding) */
-    border-radius: 0.375rem; /* rounded-md */
-    margin-top: 0.5rem; /* mt-2 */
-
-
-
-    
-position: relative;
-top: 525px;
-right: -125px;
-
-display: flex;
-flex-direction: column;
-justify-content: center; 
-align-items: center;
-
-
 
 
 }

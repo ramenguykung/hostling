@@ -1,0 +1,5 @@
+คำสั่งที่ใช้
+npm install next react react-dom
+
+คำสั่งเปิดหน้าเว็บ
+npm run dev

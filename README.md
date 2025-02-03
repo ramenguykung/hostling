@@ -46,12 +46,19 @@ Ensure you have the following software installed on your machine:
    ```
 
 3. **Set up environment variables:**
-   Create a `.env` file in the root directory and add the necessary environment variables. Refer to the `.env.example` file for the required variables.
+
+   Use the `.env` file in the root directory and add the necessary environment variables (In development phase, use `.env.development`). Refer to the `.env.example` file for the required variables.
 
 4. **Run the application:**
 
    ```bash
    npm start
+   ```
+
+   If you prefer running in local development server:
+
+   ```bash
+   npm run dev
    ```
 
 ### Contributing

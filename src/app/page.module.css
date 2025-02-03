@@ -1,30 +1,26 @@
-.container{
-
+.container {
     position: relative;
     top: 15px;
 
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    
 }
 
-.text{
+.text {
     width: 350px;
 
     color: #000;
 
+    /* Heading 1/Regular */
 
-/* Heading 1/Regular */
+    -webkit-text-stroke-color: #000;
 
--webkit-text-stroke-color: #000;
-
-font-size: 100px;
-font-style: normal;
-font-weight: 100;
-line-height: 110%; /* 70.4px */
-letter-spacing: -1.28px;
-text-transform: capitalize;
-
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 110%; /* 70.4px */
+    letter-spacing: -1.28px;
+    text-transform: capitalize;
 }

@@ -1,50 +1,39 @@
-.login{
-    
+.login {
     width: 510px;
     height: 420px;
     flex-shrink: 0;
 
     border-radius: var(--medium-20px, 20px);
-background: var(--surface-minimal, #f9feef);
+    background: var(--surface-minimal, #f9feef);
 
+    position: relative;
+    left: -300px;
 
-
-position: relative;
-left: -300px;
-
-top: -50px;
-    
-
+    top: -50px;
 }
 
-.containerLogin{
-
+.containerLogin {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    
-
 }
 
-
-.container{
-
+.container {
     position: relative;
     top: 15px;
 
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    
 }
 
-.text{
+.text {
     color: #000;
     text-align: center;
-    font-feature-settings: 'liga' off;
-    
+    font-feature-settings: "liga" off;
+
     /* Heading 1/Regular */
     -webkit-text-stroke-width: 1;
     -webkit-text-stroke-color: #000;
@@ -55,16 +44,12 @@ top: -50px;
     line-height: 110%; /* 70.4px */
     letter-spacing: -1.28px;
     text-transform: capitalize;
-
 }
 
-.home{
-
-   
-
+.home {
     position: relative;
     left: 60px;
-    
+
     display: inline-flex;
     padding: 8px 16px 8px 12px;
     justify-content: center;
@@ -73,36 +58,22 @@ top: -50px;
     font-size: 20px;
 
     border-radius: 8px;
-    
-
-
-
 }
 
-.o{
+.o {
     position: relative;
     right: -140px;
-  
-    
-
-
-
 }
 
-.space{
-
+.space {
     display: inline-flex;
-padding-top: 24px;
-flex-direction: column;
-justify-content: flex-end;
-align-items: flex-start;
-
-
-
+    padding-top: 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
-.ipg1{
-
+.ipg1 {
     display: flex;
     width: 500px;
     height: 88px;
@@ -110,47 +81,32 @@ align-items: flex-start;
     align-items: flex-start;
     gap: var(--small-4px, 4px);
 
-   
-
-  
-
-align-items: flex-start;
-gap: var(--medium-20px, 20px);
-align-self: stretch;
-
-
+    align-items: flex-start;
+    gap: var(--medium-20px, 20px);
+    align-self: stretch;
 }
 
-
-
-.rad{
-
+.rad {
     display: flex;
-padding-right: var(--small-8px, 8px);
-align-items: center;
-gap: 80px;
-align-self: stretch;
-
+    padding-right: var(--small-8px, 8px);
+    align-items: center;
+    gap: 80px;
+    align-self: stretch;
 }
 
-
-
-.input{
-
+.input {
     display: flex;
-    padding: var(--medium-12px, 3px) var(--medium-12px, 12px) var(--medium-12px, 12px) var(--medium-16px, 16px);
+    padding: var(--medium-12px, 3px) var(--medium-12px, 12px)
+        var(--medium-12px, 12px) var(--medium-16px, 16px);
     align-items: center;
     align-self: stretch;
-    
+
     border-radius: var(--medium-12px, 12px);
-    border: 1px solid var(--border-primary, #0F0E0A);
-   
+    border: 1px solid var(--border-primary, #0f0e0a);
 
+    color: var(--text-contrast, #0f0e0a);
+    font-feature-settings: "liga" off;
 
-    
-    color: var(--text-contrast, #0F0E0A);
-    font-feature-settings: 'liga' off;
-    
     /* Body/Regular */
     font-family: Supreme;
     font-size: var(--medium-16px, 16px);
@@ -158,13 +114,9 @@ align-self: stretch;
     font-weight: 400;
     line-height: 150%; /* 24px */
     letter-spacing: 0.32px;
-
-
 }
 
-.button{
-
-
+.button {
     display: flex;
     height: 80px;
     padding: var(--medium-12px, 12px) var(--medium-16px, 16px);
@@ -173,19 +125,16 @@ align-self: stretch;
     gap: 10px;
     align-self: stretch;
 
-    
-
     border-radius: var(--medium-12px, 12px);
-background: var(--surface-success, #85A947);
-box-shadow: 0px 4px var(--large-40px, 40px) 0px var(--surface-success, #85A947);
+    background: var(--surface-success, #85a947);
+    box-shadow: 0px 4px var(--large-40px, 40px) 0px
+        var(--surface-success, #85a947);
 }
 
-.fontSuccess{
+.fontSuccess {
+    color: var(--text-invert, #fbfbf9);
+    font-feature-settings: "liga" off;
 
-
-    color: var(--text-invert, #FBFBF9);
-    font-feature-settings: 'liga' off;
-    
     /* Heading 3/Emphasized */
     font-family: Supreme;
     font-size: var(--large-32px, 32px);
@@ -193,85 +142,66 @@ box-shadow: 0px 4px var(--large-40px, 40px) 0px var(--surface-success, #85A947);
     font-weight: 700;
     line-height: 110%; /* 35.2px */
     text-transform: capitalize;
-
 }
 
-.Move{
-
+.Move {
     position: relative;
     top: -5px;
-
 }
 
-.fp{
-
+.fp {
     color: #000;
-font-feature-settings: 'liga' off;
+    font-feature-settings: "liga" off;
 
-/* Body/Regular */
-font-family: Supreme;
-font-size: var(--medium-16px, 16px);
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 24px */
-letter-spacing: 0.32px;
+    /* Body/Regular */
+    font-family: Supreme;
+    font-size: var(--medium-16px, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.32px;
 }
 
-.space{
-
+.space {
     display: inline-flex;
     padding-right: 250px;
-align-items: center;
+    align-items: center;
 }
 
-.su{
-
-
+.su {
     position: relative;
     right: -25px;
 
-    color: #1F5EFF;
-font-family: Sarabun;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 150% */
+    color: #1f5eff;
+    font-family: Sarabun;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
 }
 
-
-
-.Frame4{
-
-
+.Frame4 {
     display: flex;
-padding: var(--large-80px, 80px) var(--large-40px, 40px) var(--large-80px, 80px) 80px;
-justify-content: center;
-align-items: center;
-gap: var(--large-80px, 80px);
-flex: 1 0 0;
-align-self: stretch;
+    padding: var(--large-80px, 80px) var(--large-40px, 40px)
+        var(--large-80px, 80px) 80px;
+    justify-content: center;
+    align-items: center;
+    gap: var(--large-80px, 80px);
+    flex: 1 0 0;
+    align-self: stretch;
 
-
-background: var(--surface-primary, #FBFBF9);
-
-
-
+    background: var(--surface-primary, #fbfbf9);
 }
 
-
-.Frame3{
-
-
+.Frame3 {
     display: flex;
-width: 540px;
-flex-direction: column;
-align-items: flex-start;
-gap: var(--large-80px, 80px);
+    width: 540px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--large-80px, 80px);
 }
 
-.logologin{
-
-
+.logologin {
     right: 50px;
     position: absolute;
     top: 30px;
@@ -279,22 +209,16 @@ gap: var(--large-80px, 80px);
     align-self: stretch;
 
     border-radius: var(--medium-16px, 16px);
-   
-
 }
-.textmo{
-
+.textmo {
     right: 100px;
     position: relative;
 }
 
-.textcontent{
-
-
-
+.textcontent {
     color: #000;
-    font-feature-settings: 'liga' off;
-    
+    font-feature-settings: "liga" off;
+
     /* Heading 3/Regular */
     font-family: Supreme;
     font-size: var(--large-32px, 25px);
@@ -304,15 +228,12 @@ gap: var(--large-80px, 80px);
 
     right: -40px;
     position: relative;
-
-
 }
 
-.textLogin{
-
+.textLogin {
     color: var(--surface-contrast, #858582);
-    font-feature-settings: 'liga' off;
-    
+    font-feature-settings: "liga" off;
+
     /* Body/Regular */
     font-family: Supreme;
     font-size: var(--medium-16px, 16px);
@@ -326,14 +247,12 @@ gap: var(--large-80px, 80px);
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
-
 }
 
-.textAm{
-
+.textAm {
     color: #000;
-    font-feature-settings: 'liga' off;
-    
+    font-feature-settings: "liga" off;
+
     /* Body/Regular */
     font-family: Supreme;
     font-size: var(--medium-16px, 16px);
@@ -341,13 +260,11 @@ gap: var(--large-80px, 80px);
     font-weight: 400;
     line-height: 150%; /* 24px */
     letter-spacing: 0.32px;
-
 }
 
-.nt{
-
+.nt {
     display: flex;
-padding: var(--small-6px, 6px);
-align-items: center;
-gap: var(--medium-20px, 20px);
+    padding: var(--small-6px, 6px);
+    align-items: center;
+    gap: var(--medium-20px, 20px);
 }

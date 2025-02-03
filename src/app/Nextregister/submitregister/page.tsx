@@ -1,14 +1,10 @@
-import React from 'react';
-
-
+import React from "react";
 
 const PageComponent = () => (
-        <>
-   
-
-    <div>
-        <h1>สวัสดีครับ  อิอิห โลก!</h1>
-    </div>
+    <>
+        <div>
+            <h1>สวัสดีครับ อิอิห โลก!</h1>
+        </div>
     </>
 );
 

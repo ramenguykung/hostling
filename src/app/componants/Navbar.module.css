@@ -28,7 +28,7 @@
     align-items: center;
 
     border-radius: var(--medium-20px, 20px);
-    background: var(--button-primary, #9f936f);
+    background: var(--button-primary, #B68D4F);
 }
 
 .Logout {

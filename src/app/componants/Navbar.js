@@ -2,7 +2,7 @@
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 import Image from "next/image";
-
+import { signOut } from 'next-auth/react'
 /**
  * A component that returns HTML document upon the call
  * @returns HTML document on the call

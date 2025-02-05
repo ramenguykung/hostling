@@ -12,8 +12,12 @@ export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
 
     const router = useRouter();
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
 
     const { data: session } = useSession();
     // if (session) router.replace('/');
@@ -58,8 +62,13 @@ export default function Login() {
                         <h2 className={styles.text}>Welcome back!</h2>
 
                         <Link href={"/"}>
-                            <div className={styles.signup}>- Home</div>
-                        </Link>
+                                          
+  
+                                            <button    className={styles.buttonIconLeft}>     
+           <Image src ="/IconLeft.png" width={20}  height={20} alt="logo" /> 
+              </button> 
+                                         
+                                            </Link> 
 
                         <div className={styles.container}>
                             <Image
@@ -91,9 +100,22 @@ export default function Login() {
                                         setPassword(e.target.value)
                                     }
                                     className={styles.input}
-                                    type="Password"
+                                    type={showPassword ? "text" : "password"}
                                     placeholder="Password"
                                 />
+                                    <div  className={styles.MovetoggleButton}>
+                                <div
+                                                type="button"
+                                                onClick={togglePasswordVisibility}
+                                                className={styles.toggleButton}
+                                            >
+
+                                                {showPassword ?   <Image src ="/EyeClosed.png" width={20}  height={20} alt="logo" /> :   <Image src ="/EyeOpen.png" width={20}  height={20} alt="logo" /> }
+
+                                            </div>
+                                            </div>
+
+
                             </div>
                             <br></br>
                             <br></br>
@@ -121,7 +143,7 @@ export default function Login() {
 
                     <div className={styles.logologin}>
                         <Image
-                            src="/Logologin.png"
+                            src="/ตัดกรอบ.png"
                             width={550}
                             height={500}
                             alt="logo"

@@ -30,6 +30,21 @@
 
     position: relative;
     left: 110px;
+    top: -130px;
+}
+
+.Frame3 {
+    display: flex;
+    width: 540px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--large-80px, 80px);
+
+
+    position: relative;
+    left: -300px;
+
+    top: -90px;
 }
 
 .signup {
@@ -276,13 +291,34 @@
     align-self: stretch;
     position: absolute;
     top: 247px;
-    right: 670px;
+    right: 625px;
+}
+
+.fip11{
+    display: flex;
+    padding-right: var(--small-8px, 8px);
+    align-items: center;
+    gap: 80px;
+    align-self: stretch;
+    position: absolute;
+    top: 310px;
+    right: 660px;
+
+
 }
 
 .po {
-    position: absolute;
-    top: 170px;
-    right: 920px;
+
+
+    display: flex;
+    width: 540px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--large-80px, 80px);
+     
+    position: relative;
+    top: 20px;
+    right: -150px;
 }
 
 .Select {

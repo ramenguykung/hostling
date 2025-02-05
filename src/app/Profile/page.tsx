@@ -103,7 +103,7 @@ export default function Home() {
                         <br></br>
 
                         <div className={styles.fip7}>
-                            <h5 className={styles.fontMonth}>E-mail</h5>
+                            <h5 className={styles.fontMonth}>age</h5>
                         </div>
 
                         <div className={styles.fip8}>
@@ -117,12 +117,12 @@ export default function Home() {
                         </div>
 
                         <div className={styles.fip10}>
-                            <h5 className={styles.fontMonth}>Role</h5>
+                            <h5 className={styles.fontMonth}>occupation</h5>
                         </div>
                         <input
                             className={styles.input}
                             type="text"
-                            placeholder={user.email}
+                            placeholder={user.age}
                         />
                         <br></br>
                         <input
@@ -140,8 +140,22 @@ export default function Home() {
                         <input
                             className={styles.input}
                             type="text"
-                            placeholder={user.role}
+                            placeholder={user.occupation}
                         />
+
+
+
+                                <div className={styles.fip11}>
+                            <h5 className={styles.fontMonth}>email</h5>
+                        </div>
+                        <br></br>
+                        <input
+                            className={styles.input}
+                            type="text"
+                            placeholder={user.email}
+                        />
+
+
                     </div>
                 </div>
             </div>

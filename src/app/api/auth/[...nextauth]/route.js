@@ -56,6 +56,8 @@ const authOptions = {
                     day: user.day,
                     month: user.month,
                     year: user.year,
+                    age: user.age,
+                    occupation: user.occupation,
                     gender: user.gender,
                     address: user.address,
                     postalcode: user.postalcode,
@@ -71,7 +73,9 @@ const authOptions = {
             session.user.email = token.email; // เพิ่มฟิลด์ email ลงใน Session
             session.user.day = token.day;
             session.user.month = token.month;
-            session.user.year = token.year;
+            session.user.year = token.year;         
+            session.user.occupation = token.occupation;
+            session.user.age = token.age;
             session.user.gender = token.gender;
             session.user.address = token.address;
             session.user.postalcode = token.postalcode;

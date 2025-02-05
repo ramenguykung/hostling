@@ -27,6 +27,16 @@ const userSchema = new Schema(
             required: true,
         },
 
+        age: {
+            type: String,
+            required: true,
+        },
+       
+        occupation: {
+            type: String,
+            required: true,
+        },
+       
         gender: {
             type: String,
             required: true,

@@ -9,7 +9,7 @@
     position: relative;
     left: -300px;
 
-    top: -50px;
+    top: -90px;
 }
 
 .containerLogin {
@@ -44,6 +44,24 @@
     line-height: 110%; /* 70.4px */
     letter-spacing: -1.28px;
     text-transform: capitalize;
+}
+
+.buttonIconLeft{
+
+
+    display: flex;
+width: 50px;
+height: var(--large-80px, 50px);
+padding: 16px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+
+
+border-radius: var(--large-40px, 40px);
+background: var(--button-secondary, #B68D4F);
+
+
 }
 
 .home {
@@ -137,7 +155,7 @@
     padding: var(--medium-24px, 2px) var(--small-8px, 4px);
 
     border-radius: var(--medium-20px, 20px);
-    background: var(--button-primary, #9f936f);
+    background: var(--button-primary, #B68D4F);
 }
 
 .fontLogin {
@@ -152,6 +170,12 @@
     font-weight: 700;
     line-height: 110%; /* 35.2px */
     text-transform: capitalize;
+}
+
+.MovetoggleButton {
+    position: relative;
+    top: -50px;
+    right: -470px;
 }
 
 .Move {
@@ -219,7 +243,7 @@
 }
 
 .logologin {
-    right: 50px;
+    right: 70px;
     position: absolute;
     top: 30px;
     flex: 1 0 0;

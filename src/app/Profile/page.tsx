@@ -3,46 +3,57 @@
 import Navbar from "../componants/Navbar";
 import styles from "./page.module.css";
 import { useSession } from "next-auth/react";
-import { redirect } from "next/navigation";
+import {  useRouter,redirect } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
-    const { data: session, status } = useSession();
+    const { data: session } = useSession();
     const [postData, setPostData] = useState([]);
-
+    const router = useRouter();
+   
+    
     useEffect(() => {
-        if (!session && status !== "loading") {
-            redirect("/");
-        } else {
-            getPosts();
+        if (session) {
+            const user = session.user; 
+            const id = session.user.id;
+            getPostById(id);
+            // console.log(id);
+           
         }
-    }, [session, status]);
+    }, [session]);
 
-    const getPosts = async () => {
+   
+    const getPostById = async (id) => {
         try {
-            const res = await fetch("/api/register", {
-                cache: "no-store",
+            const res = await fetch(`http://localhost:3000/api/edit/${id}`, {
+                method: "GET",
+                cache: "no-store"
+             
+                
             });
 
             if (!res.ok) {
-                throw new Error("Failed to fetch posts");
+                throw new Error("Failed to fetch a post");
+             
             }
 
             const data = await res.json();
-            setPostData(data.posts);
+            console.log("Edit post: ", data);
+        
+            setPostData(data);
         } catch (error) {
-            console.log("Error loading posts: ", error);
+            console.log(error);
         }
     };
 
     if (!session) {
         return null; // หรือคุณสามารถแสดงข้อความแจ้งให้เข้าสู่ระบบก่อน
     }
-    console.log(session);
-
-    const user = session.user;
-
+    const user = session.user; 
+    
+//  console.log(session.user?.id);
     return (
         <>
             <Navbar session={session} />
@@ -61,20 +72,25 @@ export default function Home() {
                     <div className={styles.frameinput2}>
                         <h5 className={styles.fip2}>Name</h5>
 
-                        <input
-                            className={styles.input1}
-                            type="text"
-                            placeholder={user.name}
-                        />
+                        <div
+                            className={styles.input}
+                           >
+                            
+                            
+                                {postData?.post?.name}
+                               
+                            </div>
 
                         <h5 className={styles.fip3}>Last name </h5>
                         <br></br>
 
-                        <input
-                            className={styles.input}
-                            type="text"
-                            placeholder={user.surname}
-                        />
+                        <div className={styles.input}
+                            >
+                           
+                       
+
+                            {postData?.post?.surname}
+                        </div>
                         <br></br>
 
                         <h5 className={styles.fip4}>Day</h5>
@@ -84,26 +100,28 @@ export default function Home() {
                         <h5 className={styles.fip6}>Year</h5>
 
                         <div className={styles.nt}>
-                            <input
+                            <div
                                 className={styles.input1}
-                                type="number"
-                                placeholder={user.day}
-                            />
-                            <input
+                               >
+                                   
+
+                                    {postData?.post?.day}
+                            </div>
+                            <div
                                 className={styles.input1}
-                                type="number"
-                                placeholder={user.month}
-                            />
-                            <input
+                               >
+                                {postData?.post?.month}
+                            </div>
+                            <div
                                 className={styles.input1}
-                                type="number"
-                                placeholder={user.year}
-                            />
+                                >
+                                {postData?.post?.year}
+                            </div>
                         </div>
                         <br></br>
 
                         <div className={styles.fip7}>
-                            <h5 className={styles.fontMonth}>age</h5>
+                            <h5 className={styles.fontMonth}>Age</h5>
                         </div>
 
                         <div className={styles.fip8}>
@@ -117,43 +135,52 @@ export default function Home() {
                         </div>
 
                         <div className={styles.fip10}>
-                            <h5 className={styles.fontMonth}>occupation</h5>
+                            <h5 className={styles.fontMonth}>Job</h5>
                         </div>
-                        <input
+                        <div
                             className={styles.input}
-                            type="text"
-                            placeholder={user.age}
-                        />
+                            >
+                            {postData?.post?.age}
+                            </div>
                         <br></br>
-                        <input
+                        <div
                             className={styles.input}
-                            type="text"
-                            placeholder={user.postalcode}
-                        />
+                           >
+                            {postData?.post?.phonenumber}
+                        </div>
                         <br></br>
-                        <input
+                        <div
                             className={styles.input}
-                            type="text"
-                            placeholder={user.address}
-                        />
+                            >
+                           {postData?.post?.address}
+                        </div>
                         <br></br>
-                        <input
+                        <div
                             className={styles.input}
-                            type="text"
-                            placeholder={user.occupation}
-                        />
+                            >
+                            {postData?.post?.job}
+                        </div>
 
 
 
                                 <div className={styles.fip11}>
-                            <h5 className={styles.fontMonth}>email</h5>
+                            <h5 className={styles.fontMonth}>Email</h5>
                         </div>
                         <br></br>
-                        <input
+                        <div
                             className={styles.input}
-                            type="text"
-                            placeholder={user.email}
-                        />
+                            >
+                            {postData?.post?.email}
+                          
+                        </div>
+                        <br></br>
+                       
+                        <Link href={`/edit/${postData?.post?.id}`}>
+                        <button  className={styles.button}>
+                                <h6 className={styles.fontsignup}>Edit Profile</h6>
+                            </button>
+
+                            </Link> 
 
 
                     </div>

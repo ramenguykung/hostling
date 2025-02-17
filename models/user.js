@@ -32,7 +32,7 @@ const userSchema = new Schema(
             required: true,
         },
        
-        occupation: {
+        job: {
             type: String,
             required: true,
         },
@@ -47,7 +47,7 @@ const userSchema = new Schema(
             required: true,
         },
 
-        postalcode: {
+        phonenumber: {
             type: String,
             required: true,
         },
@@ -65,6 +65,24 @@ const userSchema = new Schema(
             required: false,
             default: "user",
         },
+
+        resetToken: {
+
+            type: String,
+            required: false,
+
+        },
+
+        resetTokenExpiry: {
+
+            type: Date,
+            required: false,
+
+        }, 
+
+
+
+
     },
     { timestamps: true }
 );

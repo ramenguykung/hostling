@@ -57,10 +57,10 @@ const authOptions = {
                     month: user.month,
                     year: user.year,
                     age: user.age,
-                    occupation: user.occupation,
+                    job: user.job,
                     gender: user.gender,
                     address: user.address,
-                    postalcode: user.postalcode,
+                    phonenumber: user.phonenumber,
                 };
             }
             return token;
@@ -74,11 +74,11 @@ const authOptions = {
             session.user.day = token.day;
             session.user.month = token.month;
             session.user.year = token.year;         
-            session.user.occupation = token.occupation;
+            session.user.job = token.job;
             session.user.age = token.age;
             session.user.gender = token.gender;
             session.user.address = token.address;
-            session.user.postalcode = token.postalcode;
+            session.user.phonenumber = token.phonenumber;
             return session;
         },
     },

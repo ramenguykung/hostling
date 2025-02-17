@@ -15,6 +15,7 @@ export default function Login() {
     const [showPassword, setShowPassword] = useState(false);
 
     const router = useRouter();
+    
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
@@ -71,7 +72,7 @@ export default function Login() {
                                             </Link> 
 
                         <div className={styles.container}>
-                            <Image
+                            <Image  
                                 src="/LogoBC.png"
                                 width={120}
                                 height={120}

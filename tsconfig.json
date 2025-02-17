@@ -6,7 +6,7 @@
         "skipLibCheck": true,
         "strict": true,
         "noEmit": true,
-        "esModuleInterop": true,
+        "esModuleInterop": true, 
         "module": "esnext",
         "moduleResolution": "bundler",
         "resolveJsonModule": true,
@@ -22,6 +22,6 @@
             "@/*": ["./src/*"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/componants/Navbar.js"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/componants/Navbar.jsx"],
     "exclude": ["node_modules"]
 }

@@ -15,21 +15,24 @@ function register() {
             const [day, setDay] = useState("");
             const [year, setYear] = useState("");
             
-            const [occupation, setOccupation] = useState("");
+            const [job, setJob] = useState("");
             const [gender, setGender] = useState("");
             const [address, setAddress] = useState("");
-            const [postalcode, setPostalCode] = useState("");
+            const [phonenumber, setPhonenumber] = useState("");
             const [email,setEmail] = useState("");
             const [password,setPassword] = useState("");
             const [confirmpassword,setConfirmpassword] = useState("");
 
             const [error,setError] = useState("");
-            const [  age,setAge] = useState("");
+            const [age,setAge] = useState("");
 
             const [erroremail,setErroemailr] = useState("");
+            const [showPassword, setShowPassword] = useState(false);
            
          
-
+            const togglePasswordVisibility = () => {
+              setShowPassword(!showPassword);
+          };
 
             const { data: session } = useSession();
             if (session) redirect('/welcome');
@@ -53,7 +56,7 @@ function register() {
                             }
 
 
-                            if (postalcode.length !== 10 || !/^\d+$/.test(postalcode)) {
+                            if (phonenumber.length !== 10 || !/^\d+$/.test(phonenumber)) {
                               setError("Phone must contain only numbers and be no longer than 10 digits.");
                               return;
                           }
@@ -65,6 +68,14 @@ function register() {
                             
                             return;
                           }
+
+
+
+                          if (!/^(0?[1-9]|[12][0-9]|3[01])$/.test(day)) {
+                            setError("Day must be a number between 1 and 31.");
+                            return;
+                        }
+                        
 
                           if (!/^\d{4}$/.test(year)) {
                             setError("Year must contain only numbers and exactly 4 digits.");
@@ -85,7 +96,7 @@ function register() {
                             return;
                         }
 
-                        if (!/^[a-zA-Zก-๙]+$/.test(occupation)) {
+                        if (!/^[a-zA-Zก-๙]+$/.test(job)) {
                           setError("occupation must contain only letters.");
                           return;
                       }
@@ -136,7 +147,7 @@ function register() {
                                       "Content-Type": "application/json"
                                   },
                                   body: JSON.stringify({
-                                      surname,name,month,day,year, gender,address, postalcode,email, password,age,occupation
+                                      surname,name,month,day,year, gender,address,phonenumber,email, password,age,job
                                   })
                               })
 
@@ -297,16 +308,41 @@ function register() {
                                                         <option value="woman">woman</option>
                                                     </select>
 
-                                                    <input onChange={(e) => setOccupation(e.target.value)}  className={styles.input1} type="text"  placeholder="occupation" required /> 
+                                                    <input onChange={(e) => setJob(e.target.value)}  className={styles.input1} type="text"  placeholder="Job" required /> 
                                                     <input onChange={(e) => setAge(e.target.value)}  className={styles.input1} type="text"  placeholder="age" required />
 
                                                 <input onChange={(e) => setAddress(e.target.value)}  className={styles.input} type="text"  placeholder="Address according to ID card"required  />   
-                                                <input onChange={(e) => setPostalCode(e.target.value)}  className={styles.input} type="text"  placeholder="Postal Code"required  />  
+                                                <input onChange={(e) => setPhonenumber(e.target.value)}  className={styles.input} type="text"  placeholder="phone number"required  />  
 
                                                 <input id="emailInput" onChange={(e) => setEmail(e.target.value)} className={styles.input} type="email" placeholder="Email" required />
 
-                                                <input onChange={(e) => setPassword(e.target.value)}  className={styles.input} type="password"  placeholder="Password" required  />   
-                                                <input onChange={(e) => setConfirmpassword(e.target.value)}  className={styles.input} type="password"  placeholder="Confirmpassword" required />     
+                                                <input onChange={(e) => setPassword(e.target.value)}  className={styles.input} type="password"  placeholder="Password" required  type={showPassword ? "text" : "password"}/>   
+                                                <input onChange={(e) => setConfirmpassword(e.target.value)}  className={styles.input} type="password"  placeholder="Confirmpassword" required type={showPassword ? "text" : "password"} />     
+
+                                                <div  className={styles.MovetoggleButton}>
+                                <div
+                                                type="button"
+                                                onClick={togglePasswordVisibility}
+                                                className={styles.toggleButton}
+                                            >
+
+                                                {showPassword ?   <Image src ="/EyeClosed.png" width={20}  height={20} alt="logo" /> :   <Image src ="/EyeOpen.png" width={20}  height={20} alt="logo" /> }
+
+                                            </div>
+                                            </div>
+
+                                            
+                                           < div  className={styles.MovetoggleButtonn}>
+                                <div
+                                                type="button"
+                                                onClick={togglePasswordVisibility}
+                                           
+                                            >
+
+                                                {showPassword ?   <Image src ="/EyeClosed.png" width={20}  height={20} alt="logo" /> :   <Image src ="/EyeOpen.png" width={20}  height={20} alt="logo" /> }
+
+                                            </div>
+                                            </div>
 
                                               
                                                 <button   type="submit"  className={styles.button}>

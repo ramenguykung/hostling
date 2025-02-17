@@ -382,12 +382,12 @@ background: var(--button-secondary, #B68D4F);
 
 .MovetoggleButton {
     position: relative;
-    top: -125px;
-    right:  -270px;
+    top: -95px;
+    right: -180px;
 }
 
 .MovetoggleButtonn {
     position: relative;
-    top: -100px;
-    right: -270px;
+    top: -90px;
+    right: -180px;
 }

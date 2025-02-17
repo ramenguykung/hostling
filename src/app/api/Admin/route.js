@@ -1,21 +1,12 @@
 import { NextResponse } from "next/server";
 import { connectMongoDB } from "../../../../lib/mongodb";
-import User from "../../../../models/user";
+import Admin from "../../../../models/Admin";
 import bcrypt from "bcryptjs";
 
 export async function POST(req) {
     try {
         const {
-            surname,
-            name,
-            month,
-            day,
-            year,
-            gender,
-            age,
-            job,
-            address,
-            phonenumber,
+            
             email,
             password,
         } = await req.json();
@@ -24,17 +15,8 @@ export async function POST(req) {
         const hashedPassword = await bcrypt.hash(password, 10);
 
         await connectMongoDB();
-        await User.create({
-            surname,
-            name,
-            month,
-            day,
-            year,
-            age,
-            job,
-            gender,
-            address,
-            phonenumber,
+        await Admin.create({
+           
             email,
             password: hashedPassword,
         });
@@ -54,6 +36,6 @@ export async function POST(req) {
 
 export async function GET() {
     await connectMongoDB();
-    const posts = await User.find({});
+    const posts = await Admin.find({});
     return NextResponse.json({ posts });
 }

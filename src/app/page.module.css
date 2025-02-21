@@ -1,0 +1,168 @@
+.container {
+    position: relative;
+    top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    width: 350px;
+
+    color: #000;
+
+    /* Heading 1/Regular */
+
+    -webkit-text-stroke-color: #000;
+
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 110%; /* 70.4px */
+    letter-spacing: -5.28px;
+    text-transform: capitalize;
+}
+
+.titleholder{
+
+    display: flex;
+height: 800px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+align-self: stretch;
+
+background: var(--surface-minimal, #EDEDEB);
+
+
+
+
+}
+
+.images{
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--medium-24px, 24px);
+    align-self: stretch;
+
+
+
+}
+
+.images1{
+
+    display: flex;
+    width: 320px;
+    height: 320px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4.8px;
+    background: var(--Colors-Greyscale-200, #EBEBF0);
+
+}
+
+.storyboard{
+
+    display: flex;
+    height: 712px;
+    padding: var(--medium-16px, 16px) var(--large-64px, 64px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--small-8px, 8px);
+    flex-shrink: 0;
+    align-self: stretch;
+
+    background: var(--surface-primary, #FBFBF9);
+
+
+}
+
+.topnavigation{
+
+
+
+    display: flex;
+padding: var(--medium-24px, 24px) var(--large-80px, 80px);
+align-items: center;
+gap: var(--large-80px, 80px);
+align-self: stretch;
+}
+
+.middleholder{
+    display: flex;
+    height: 600px;
+    padding-right: var(--large-80px, 80px);
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+
+
+}
+
+
+.mediaplaceholder{
+
+    display: flex;
+height: 600px;
+max-width: 450px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex: 1 0 0;
+
+border-radius: 4.8px;
+background: var(--Colors-Greyscale-200, #EBEBF0);
+
+
+
+}
+
+.divider{
+
+    width: var(--large-80px, 80px);
+    align-self: stretch;
+
+
+}
+
+.storyboardtextrightbutton{
+
+    display: flex;
+    padding: var(--medium-24px, 24px) 0px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--large-32px, 32px);
+    align-self: stretch;
+
+
+
+}
+
+.buttonIconLeft{
+
+
+    display: flex;
+width: 50px;
+height: var(--large-80px, 50px);
+padding: 16px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+
+
+border-radius: var(--large-40px, 40px);
+background: var(--button-secondary, #B68D4F);
+
+
+position: absolute;
+    top: 1500px;
+    right: 500px;
+
+}
